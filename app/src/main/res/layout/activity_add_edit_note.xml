@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddEditNoteActivity">
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/black"
+        android:layout_marginBottom="50dp"
+        android:weightSum="1"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/backImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_arrow_back_ios_24"
+            android:layout_weight=".2"
+            android:layout_gravity="center"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Add/Edit Expenses"
+            android:gravity="center"
+            android:textSize="18dp"
+            android:layout_weight=".7"
+            android:textColor="@color/white"
+            />
+
+
+    </LinearLayout>
+
+    <Spinner
+        android:id="@+id/idEdtNoteName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_below="@+id/header"
+        android:layout_marginTop="16dp"/>
+
+
+    <EditText
+        android:id="@+id/idEdtAmount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_below="@id/idEdtNoteName"
+        android:hint="Enter Amount"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black" />
+
+    <!--edit text for note description-->
+    <EditText
+        android:id="@+id/idEdtNoteDesc"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/idBtn"
+        android:layout_below="@id/idEdtAmount"
+        android:layout_margin="10dp"
+        android:gravity="start|top"
+        android:hint="Enter your Notes"
+        android:inputType="textMultiLine"
+        android:singleLine="false"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black" />
+
+    <!--button for saving and updating a note-->
+    <Button
+        android:id="@+id/idBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="20dp"
+        android:background="@color/purple_200"
+        android:text="Button"
+        android:textAllCaps="false"
+        android:textColor="@color/white" />
+
+</RelativeLayout>
