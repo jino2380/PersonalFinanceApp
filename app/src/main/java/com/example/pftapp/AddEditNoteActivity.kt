@@ -32,8 +32,7 @@ class AddEditNoteActivity : AppCompatActivity() {
     lateinit var saveBtn: Button
 
     lateinit var noteCategory: String
-    // on below line we are creating variable for
-    // viewmodal and integer for our note id.
+
     lateinit var viewModal: NoteViewModal
     var noteID = -1;
     val categories = arrayOf("Food", "Transport", "Entertainment", "Bills", "Miscellaneous")
@@ -73,7 +72,6 @@ class AddEditNoteActivity : AppCompatActivity() {
                     val totalSpent = viewModal.getTotalSpent(noteCategory).first() ?: 0.0
                     val budget = viewModal.getBudgetForCategory(noteCategory).first() ?: 0.0
 
-
                     if (totalSpent >= budgetAmounts[selectedItem]!!) {
                         Log.e("1", totalSpent.toString())
                         Log.e("2", budget.toString())
@@ -84,8 +82,6 @@ class AddEditNoteActivity : AppCompatActivity() {
                             Toast.LENGTH_LONG
                         ).show()
                     } else {
-//                        Toast.makeText(applicationContext, budgetAmounts[selectedItem]!!.toString(), Toast.LENGTH_LONG)
-//                            .show()
 
                     }
 
@@ -122,7 +118,7 @@ class AddEditNoteActivity : AppCompatActivity() {
 
         saveBtn.setOnClickListener {
 
-            val noteCategory = noteCategory.toString()
+            val noteCategory = noteCategory
             val amount = amountEdt.text.toString()
             val noteDescription = noteEdt.text.toString()
 

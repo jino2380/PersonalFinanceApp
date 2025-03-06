@@ -28,7 +28,6 @@ class NoteRVAdapter(
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        // inflating our layout file for each item of recycler view.
         val itemView = LayoutInflater.from(parent.context).inflate(
             R.layout.note_rv_item,
             parent, false
@@ -37,7 +36,6 @@ class NoteRVAdapter(
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        // on below line we are setting data to item of recycler view.
         holder.noteTV.setText(allNotes.get(position).category)
         holder.amountTV.setText(allNotes.get(position).amount)
         holder.dateTV.setText("Last Updated : " + allNotes.get(position).timeStamp)

@@ -71,7 +71,6 @@
         android:textColor="@color/black"
         android:textColorHint="@color/black" />
 
-    <!--button for saving and updating a note-->
     <Button
         android:id="@+id/idBtn"
         android:layout_width="match_parent"
